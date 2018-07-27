@@ -1,0 +1,18 @@
+version: '2'
+
+vars:
+  REPO: ynishi/purescript
+  VERSION: 10.6.0-0.12.0-1 # ${node}-${purescript}-${repo}
+
+tasks:
+  build:
+    desc: build docker image
+    cmds:
+      - docker build -t {{.REPO}}:latest . --no-cache
+      - docker build -t {{.REPO}}:{{.VERSION}} .
+  push:
+    deps: [build]
+    desc: push docker image
+    cmds:
+      - docker push {{.REPO}}:latest
+      - docker push {{.REPO}}:{{.VERSION}}
