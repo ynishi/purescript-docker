@@ -14,9 +14,9 @@ RUN set -eux; \
   yarn global add --prefix $YARNHOME \
     purescript \
     pulp \
-    bower \
+    psc-package \
   && pulp --version \
-  && pulp init
+  && psc-package --version
 
 VOLUME [$APPHOME]
 
