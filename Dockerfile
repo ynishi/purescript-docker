@@ -6,7 +6,10 @@ ENV PATH $PATH:$YARNHOME/bin
 
 RUN set -eux; \
   mkdir -p $YARNHOME/bin $APPHOME \
-  && chown -R node:node ~node
+  && chown -R node:node ~node \
+  && apt-get update \
+  && apt-get install git -y \
+  && rm -rf /var/lib/apt/lists/*
 
 USER node
 WORKDIR $APPHOME
