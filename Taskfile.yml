@@ -2,7 +2,7 @@ version: '2'
 
 vars:
   REPO: ynishi/purescript-docker
-  VERSION: 11.4.0-0.12.1-3 # ${node}-${purescript}-${repo}
+  VERSION: 11.4.0-0.12.1-4 # ${node}-${purescript}-${repo}
 
 tasks:
   build:
