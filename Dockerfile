@@ -1,4 +1,4 @@
-FROM node:11.4.0-stretch-slim
+FROM node:12.10.0-stretch-slim
 
 ENV YARNHOME /home/node/yarn
 ENV APPHOME /home/node/app
